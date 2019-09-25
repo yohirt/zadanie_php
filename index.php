@@ -54,13 +54,13 @@ class Stats
     private static function print_table($result, $title)
     {
 
-        echo "<table><tr>
+        echo '<table border="1"><tr>
             <th>Book |</th>
             <th>Compatibility |</th>
             <th>Book Date |</th>
             <th>Male AVG age |</th>
             <th>Female AVG age</th>
-            </tr>";
+            </tr>';
 
         while ($row = $result->fetch_assoc()) {
             similar_text(strtolower($row["name"]), strtolower($title), $percent);
