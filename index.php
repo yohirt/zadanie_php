@@ -63,7 +63,7 @@ class Stats
             </tr>";
 
         while ($row = $result->fetch_assoc()) {
-            similar_text($row["name"], $title, $percent);
+            similar_text(strtolower($row["name"]), strtolower($title), $percent);
             echo "<tr>";
             echo "<td>" . $row["name"] . "</td><td>" . round($percent, 2) . " %</td><td>" . $row["book_date"] . "</td><td>" . round($row["female_avg"]) . "</td>";
             echo "<td>" . round($row["male_avg"]) . "</td>";
